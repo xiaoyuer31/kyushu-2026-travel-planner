@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#10233f" />
+    <meta
+      name="description"
+      content="九州 2026 自驾旅行计划：每日路线、停车信息、导航名称与住宿安排。"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2310233f'/%3E%3Cpath d='M32 10c-9.4 0-17 7.6-17 17 0 12.2 17 28 17 28s17-15.8 17-28c0-9.4-7.6-17-17-17Z' fill='%23ee6c35'/%3E%3Ccircle cx='32' cy='27' r='7' fill='%23fffaf2'/%3E%3C/svg%3E"
+    />
+    <title>九州 2026 · 旅行计划</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+      defer
+    ></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#day-content">跳到行程</a>
+
+    <header class="site-header" id="site-header">
+      <div class="header-overlay"></div>
+      <div class="header-inner">
+        <div class="brand-row">
+          <a class="brand" href="#" aria-label="返回行程顶部">
+            <span class="brand-mark" aria-hidden="true">九</span>
+            <span>
+              <span class="brand-name" id="trip-name">九州 2026</span>
+              <span class="brand-kicker" id="trip-kicker">ROAD BOOK</span>
+            </span>
+          </a>
+          <span class="trip-season" id="trip-season">2026 · KYUSHU</span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow" id="hero-eyebrow">自驾旅行计划</p>
+          <h1 id="hero-title">把每一段路，<br />放进随手可查的行程里。</h1>
+          <p class="hero-meta" id="hero-meta">2 日原型 · 九州北部</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="day-nav-shell" aria-label="每日行程">
+      <div class="day-nav" id="day-nav" role="tablist" aria-label="选择日期"></div>
+    </nav>
+
+    <main id="day-content" tabindex="-1">
+      <div class="loading-state" id="loading-state" role="status">
+        <span class="loading-dot" aria-hidden="true"></span>
+        正在整理今天的路线…
+      </div>
+
+      <div class="content-shell" id="content-shell" hidden>
+        <section class="day-intro" aria-labelledby="day-title">
+          <div>
+            <p class="day-label" id="day-label"></p>
+            <h2 id="day-title"></h2>
+            <p class="day-summary" id="day-summary"></p>
+          </div>
+          <div class="day-facts" id="day-facts" aria-label="当日概览"></div>
+        </section>
+
+        <div class="main-grid">
+          <section class="itinerary-section" aria-labelledby="itinerary-heading">
+            <div class="section-heading">
+              <p class="section-index">01</p>
+              <div>
+                <p class="section-kicker">TODAY’S ROUTE</p>
+                <h2 id="itinerary-heading">今日行程</h2>
+              </div>
+            </div>
+            <div class="timeline" id="itinerary-list"></div>
+          </section>
+
+          <aside class="route-aside" aria-label="路线概览">
+            <section class="map-card" aria-labelledby="map-heading">
+              <div class="map-header">
+                <div>
+                  <p class="section-kicker">ROUTE PREVIEW</p>
+                  <h2 id="map-heading">路线地图</h2>
+                </div>
+                <span class="map-status-tag">互动地图</span>
+              </div>
+              <div class="map-canvas" id="map-canvas" aria-label="当日互动路线地图"></div>
+              <ol class="route-list" id="route-list"></ol>
+            </section>
+          </aside>
+        </div>
+
+        <section class="hotel-section" aria-labelledby="hotel-heading">
+          <div class="section-heading hotel-heading-row">
+            <p class="section-index">02</p>
+            <div>
+              <p class="section-kicker">STAY TONIGHT</p>
+              <h2 id="hotel-heading">今晚住宿</h2>
+            </div>
+          </div>
+          <div id="hotel-card"></div>
+        </section>
+
+        <footer class="site-footer">
+          <p id="footer-note">原型行程资料，请在出发前再次确认营业时间与停车安排。</p>
+          <p class="footer-signoff">KYUSHU · 2026</p>
+        </footer>
+      </div>
+
+      <section class="error-state" id="error-state" hidden aria-live="polite">
+        <p class="error-code">ROUTE OFFLINE</p>
+        <h2>行程暂时无法载入</h2>
+        <p>请确认你是通过网页服务器打开本站，而不是直接打开 HTML 文件。</p>
+        <button class="button button-primary" id="retry-button" type="button">重新载入</button>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
