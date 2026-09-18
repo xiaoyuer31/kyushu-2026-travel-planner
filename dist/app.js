@@ -120,14 +120,14 @@ function renderStops(stops) {
     .join("");
 }
 
-function renderMap(day) {
+function renderMap(day, hotel) {
   if (state.map) {
     state.map.remove();
     state.map = null;
   }
 
   const hotelPoint = {
-    ...day.hotel,
+    ...hotel,
     time: "入住",
     type: "hotel",
   };
@@ -267,9 +267,18 @@ function renderHotel(hotel, day) {
   `;
 }
 
+function getHotelForDay(day) {
+  const hotel = day.hotelId ? state.trip.hotels?.[day.hotelId] : day.hotel;
+  if (!hotel) {
+    throw new Error(`Missing hotel data for ${day.shortLabel}`);
+  }
+  return hotel;
+}
+
 function selectDay(index, moveFocus = false) {
   state.activeDayIndex = index;
   const day = state.trip.days[index];
+  const hotel = getHotelForDay(day);
 
   document.querySelectorAll(".day-tab").forEach((button, buttonIndex) => {
     button.setAttribute("aria-selected", buttonIndex === index ? "true" : "false");
@@ -280,8 +289,8 @@ function selectDay(index, moveFocus = false) {
   elements.daySummary.textContent = day.summary;
   renderFacts(day.facts);
   renderStops(day.stops);
-  renderMap(day);
-  renderHotel(day.hotel, day);
+  renderMap(day, hotel);
+  renderHotel(hotel, day);
   bindCopyButtons();
 
   const url = new URL(window.location.href);

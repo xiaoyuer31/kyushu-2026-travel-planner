@@ -18,6 +18,8 @@ dist/
 
 All trip content lives in `dist/data/itinerary.json`. Update that file to reuse the same site for another trip; the day navigation, itinerary cards, parking details, copy buttons, hotel section, and map markers are rendered from the JSON.
 
+Hotels are stored once in the top-level `hotels` catalog. Each day selects its overnight stay with `hotelId`, keeping the hotel card, route label, copied navigation name, and map marker synchronized.
+
 The `navigationName` and `parking` fields are deliberately separate so each can be changed independently.
 
 ## Preview locally

@@ -4,12 +4,82 @@
   "season": "2026 · KYUSHU",
   "eyebrow": "自驾旅行计划",
   "heroTitle": "把每一段路，｜放进随手可查的行程里。",
-  "heroMeta": "2 日行程 · 福冈 → 日田 → 别府 → 由布院 → 黑川温泉",
+  "heroMeta": "9 日行程 · 12月4日–13日 · 福冈 → 别府 → 黑川温泉 → 熊本 → 福冈",
   "footerNote": "营业时间、缆车运行和停车安排可能调整，请在出发前再次确认。",
+  "hotels": {
+    "hotel-new-tsuruta": {
+      "stay": {
+        "checkInDate": "2026-12-04",
+        "checkOutDate": "2026-12-05",
+        "nights": 1
+      },
+      "names": {
+        "zh": "新鹤田酒店",
+        "ja": "ホテルニューツルタ",
+        "en": "Hotel New Tsuruta"
+      },
+      "navigationName": "ホテルニューツルタ",
+      "coordinates": [33.278618, 131.5060831],
+      "checkIn": "15:00 后",
+      "address": "日本大分县别府市北滨 1-14-15",
+      "parking": "邻接第一、第二停车场；住客入库后 21 小时最高 ¥700，先到先得"
+    },
+    "yama-no-yado-shinmeikan": {
+      "stay": {
+        "checkInDate": "2026-12-05",
+        "checkOutDate": "2026-12-06",
+        "nights": 1
+      },
+      "names": {
+        "zh": "山之宿 新明馆",
+        "ja": "山の宿 新明館",
+        "en": "Yama No Yado Shinmeikan"
+      },
+      "navigationName": "山の宿 新明館",
+      "coordinates": [33.0775052, 131.1405987],
+      "checkIn": "15:00 后（最晚 18:00）",
+      "address": "日本熊本县阿苏郡南小国町满愿寺 6608",
+      "parking": "住客专用免费停车场；约 17 个室外车位，无需预约"
+    },
+    "omo5-kumamoto": {
+      "stay": {
+        "checkInDate": "2026-12-06",
+        "checkOutDate": "2026-12-08",
+        "nights": 2
+      },
+      "names": {
+        "zh": "OMO5 熊本 by 星野集团",
+        "ja": "OMO5熊本 by 星野リゾート",
+        "en": "OMO5 Kumamoto by Hoshino Resorts"
+      },
+      "navigationName": "OMO5熊本 by 星野リゾート",
+      "coordinates": [32.8028042, 130.7100903],
+      "checkIn": "15:00 后",
+      "address": "日本熊本县熊本市中央区手取本町 5-1",
+      "parking": "无专用停车场；合作停车场先到先得，前台验证停车券，住宿优惠价每晚 ¥1,200 起"
+    },
+    "hotel-monterey-la-soeur-fukuoka": {
+      "stay": {
+        "checkInDate": "2026-12-08",
+        "checkOutDate": "2026-12-13",
+        "nights": 5
+      },
+      "names": {
+        "zh": "福冈蒙特利拉苏尔酒店",
+        "ja": "ホテルモントレ ラ・スール福岡",
+        "en": "Hotel Monterey La Soeur Fukuoka"
+      },
+      "navigationName": "ホテルモントレ ラ・スール福岡",
+      "coordinates": [33.59113, 130.395461],
+      "checkIn": "15:00 后",
+      "address": "日本福冈县福冈市中央区大名 2-8-27",
+      "parking": "馆内机械式停车场先到先得；每晚 ¥1,800（15:00–翌日 12:00），满位时使用附近停车场"
+    }
+  },
   "days": [
     {
       "shortLabel": "DAY 1",
-      "dateLabel": "福冈至日田、别府",
+      "dateLabel": "12月4日 · 福冈至日田、别府",
       "title": "从福冈落地，沿山路去别府",
       "summary": "在福冈机场取车后前往日田豆田町散步，傍晚继续到别府，在 Hotel New Tsuruta 入住。",
       "facts": ["约 155 km", "驾驶约 2h 40m", "2 个停靠点 + 住宿"],
@@ -45,24 +115,13 @@
           }
         }
       ],
-      "hotel": {
-        "names": {
-          "zh": "新鹤田酒店",
-          "ja": "ホテルニューツルタ",
-          "en": "Hotel New Tsuruta"
-        },
-        "navigationName": "ホテルニューツルタ",
-        "coordinates": [33.278618, 131.5060831],
-        "checkIn": "15:00 后",
-        "address": "日本大分县别府市北滨 1-14-15",
-        "parking": "邻接第一、第二停车场；住客入库后 21 小时最高 ¥700，先到先得"
-      }
+      "hotelId": "hotel-new-tsuruta"
     },
     {
       "shortLabel": "DAY 2",
-      "dateLabel": "别府、由布院至黑川温泉",
+      "dateLabel": "12月5日 · 别府、由布院至黑川温泉",
       "title": "从鹤见岳，走进温泉山林",
-      "summary": "上午搭乘别府缆车，之后前往由布院的汤之坪街道与金鳞湖散步，傍晚到黑川温泉的山河旅馆入住。",
+      "summary": "上午搭乘别府缆车，之后前往由布院的汤之坪街道与金鳞湖散步，傍晚到黑川温泉的山之宿新明馆入住。",
       "facts": ["约 95 km", "驾驶约 2h 10m", "3 个停靠点 + 住宿"],
       "stops": [
         {
@@ -111,18 +170,70 @@
           }
         }
       ],
-      "hotel": {
-        "names": {
-          "zh": "黑川温泉 山河旅馆",
-          "ja": "黒川温泉 旅館 山河",
-          "en": "Kurokawa Onsen Ryokan Sanga"
-        },
-        "navigationName": "黒川温泉 旅館 山河",
-        "coordinates": [33.0790323, 131.1321323],
-        "checkIn": "15:00 后",
-        "address": "日本熊本县阿苏郡南小国町满愿寺 6961-1",
-        "parking": "住客免费停车；约 25 个车位，抵达后依现场指示停放"
-      }
+      "hotelId": "yama-no-yado-shinmeikan"
+    },
+    {
+      "shortLabel": "DAY 3",
+      "dateLabel": "12月6日 · 黑川温泉至熊本",
+      "title": "从温泉山谷，前往熊本",
+      "summary": "当天详细行程仍待补充；今晚入住 OMO5 熊本 by 星野集团。",
+      "facts": ["住宿已确认", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "omo5-kumamoto"
+    },
+    {
+      "shortLabel": "DAY 4",
+      "dateLabel": "12月7日 · 熊本",
+      "title": "在熊本停留的一天",
+      "summary": "当天详细行程仍待补充；今晚继续入住 OMO5 熊本 by 星野集团。",
+      "facts": ["熊本第 2 晚", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "omo5-kumamoto"
+    },
+    {
+      "shortLabel": "DAY 5",
+      "dateLabel": "12月8日 · 熊本至福冈",
+      "title": "返回福冈，入住天神",
+      "summary": "当天详细行程仍待补充；今晚入住福冈蒙特利拉苏尔酒店。",
+      "facts": ["福冈第 1 晚", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "hotel-monterey-la-soeur-fukuoka"
+    },
+    {
+      "shortLabel": "DAY 6",
+      "dateLabel": "12月9日 · 福冈",
+      "title": "以天神为据点游览福冈",
+      "summary": "当天详细行程仍待补充；今晚继续入住福冈蒙特利拉苏尔酒店。",
+      "facts": ["福冈第 2 晚", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "hotel-monterey-la-soeur-fukuoka"
+    },
+    {
+      "shortLabel": "DAY 7",
+      "dateLabel": "12月10日 · 福冈",
+      "title": "福冈自由安排",
+      "summary": "当天详细行程仍待补充；今晚继续入住福冈蒙特利拉苏尔酒店。",
+      "facts": ["福冈第 3 晚", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "hotel-monterey-la-soeur-fukuoka"
+    },
+    {
+      "shortLabel": "DAY 8",
+      "dateLabel": "12月11日 · 福冈",
+      "title": "福冈自由安排",
+      "summary": "当天详细行程仍待补充；今晚继续入住福冈蒙特利拉苏尔酒店。",
+      "facts": ["福冈第 4 晚", "详细行程待补充"],
+      "stops": [],
+      "hotelId": "hotel-monterey-la-soeur-fukuoka"
+    },
+    {
+      "shortLabel": "DAY 9",
+      "dateLabel": "12月12日 · 福冈",
+      "title": "旅程最后一个完整日",
+      "summary": "当天详细行程仍待补充；今晚继续入住福冈蒙特利拉苏尔酒店，次日退房。",
+      "facts": ["福冈第 5 晚", "12月13日退房"],
+      "stops": [],
+      "hotelId": "hotel-monterey-la-soeur-fukuoka"
     }
   ]
 }
